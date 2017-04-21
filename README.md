@@ -10,6 +10,6 @@ Overwrite the existing /opt/puppetlabs/server/apps/puppetserver/bin/generate-pup
 
 Example Usage
 
-Add the class codemgmt_1055_hotfix to the PE Master node group in the PE Classifier.  Execute a Puppet agent run on the masters to enforce the updated file resource.
+Add the class codemgmt_1055_hotfix to a node group containing only the PE master node in the PE Classifier.  Execute a Puppet agent run on the PE master to enforce the updated file resource.
 
 The bug in question manifests as Code Manager code deploys hanging.  If the inability to deploy code is preventing the deployment of this hotfix module, disable environment isolation temporarily using the instructions at https://docs.puppet.com/puppet/4.10/environment_isolation.html#troubleshooting-environment-isolation.  Once the module is deployed, re-enable environment isolation.
